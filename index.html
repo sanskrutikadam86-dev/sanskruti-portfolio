@@ -1,134 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sanskruti Kadam - Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanskruti Kadam | Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      color: #333;
-    }
+<style>
 
-    header {
-      background: #4f46e5;
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
+html{
+scroll-behavior:smooth;
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
+body{
+background:#f8fafc;
+color:#1e293b;
+line-height:1.6;
+}
 
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* NAVBAR */
 
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+nav{
+position:sticky;
+top:0;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+z-index:1000;
+}
 
-    h2 {
-      color: #4f46e5;
-    }
+.logo{
+font-size:1.5rem;
+font-weight:bold;
+color:#4f46e5;
+}
 
-    .skills span {
-      display: inline-block;
-      background: #e0e7ff;
-      color: #3730a3;
-      padding: 6px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111827;
-      color: white;
-      margin-top: 30px;
-    }
+nav a{
+text-decoration:none;
+color:#334155;
+font-weight:600;
+transition:.3s;
+}
 
-    a {
-      color: #4f46e5;
-      text-decoration: none;
-    }
-  </style>
+nav a:hover{
+color:#4f46e5;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+
+background:linear-gradient(
+-45deg,
+#4f46e5,
+#7c3aed,
+#3b82f6,
+#06b6d4);
+
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+color:white;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero h1{
+font-size:3.8rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:white;
+color:#4f46e5;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* SECTIONS */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:70px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:35px;
+color:#4f46e5;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+margin-bottom:25px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+justify-content:center;
+}
+
+.skill{
+background:#eef2ff;
+padding:10px 18px;
+border-radius:25px;
+font-weight:600;
+}
+
+.project-card{
+text-align:center;
+}
+
+.project-card h3{
+margin-bottom:10px;
+}
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Sanskruti Kadam</h1>
-    <p>BSc IT Student | Exploring Web Development, Data & Tech Roles</p>
-  </header>
+<nav>
+<div class="logo">SK</div>
 
-  <section>
-    <div class="card">
-      <h2>👩‍🎓 About Me</h2>
-      <p>
-        I am a BSc IT student passionate about technology, problem solving, and building real-world applications.
-        I enjoy exploring multiple tech domains including web development, data handling, and software tools.
-      </p>
-    </div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#project">Project</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-    <div class="card">
-      <h2>💡 Projects</h2>
+<section class="hero">
+<div>
 
-      <h3>Budget Buddy</h3>
-      <p>
-        A personal expense tracking application that helps users manage income, expenses,
-        and monthly budgeting efficiently with simple and user-friendly design.
-      </p>
-    </div>
+<h1>Hi, I'm Sanskruti 👋</h1>
 
-    <div class="card skills">
-      <h2>🛠 Skills</h2>
-      <span>Python</span>
-      <span>SQL</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>Excel</span>
-      <span>Power BI</span>
-    </div>
+<p>
+BSc IT Graduate | Data Analytics, Web Development & Technology Enthusiast
+</p>
 
-    <div class="card">
-      <h2>🎓 Education</h2>
-      <p>
-        BSc IT – Overall CGPA: 9.30
-      </p>
-    </div>
+<a href="Sanskruti_Kadam_Resume.pdf"
+class="btn"
+download>
+Download Resume
+</a>
 
-    <div class="card">
-      <h2>📞 Contact</h2>
-      <p>
-        Phone: 8104591780 <br/>
-        Email: sanskrutikadam86@gmail.com <br/>
-        LinkedIn: <a href="#">Add your profile</a>
-      </p>
-    </div>
-  </section>
+</div>
+</section>
 
-  <footer>
-    © 2026 Sanskruti Kadam | Portfolio Website
-  </footer>
+<section id="about" class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+Bachelor of Science (Information Technology) graduate with a CGPA of 9.30.
+Passionate about data analytics, visualization, and web development.
+I enjoy building practical solutions that transform data into meaningful insights.
+</p>
+</div>
+
+</section>
+
+<section id="project" class="container">
+
+<h2 class="section-title">Featured Project</h2>
+
+<div class="card project-card">
+
+<h3>💰 Budget Buddy</h3>
+
+<p>
+A budgeting web application that helps users track income,
+expenses, spending categories and monthly budgets efficiently.
+
+Built using HTML, CSS, JavaScript, Java and MySQL.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills" class="container">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">MySQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">Excel</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">GitHub</div>
+
+</div>
+
+</section>
+
+<section id="education" class="container">
+
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+
+<h3>Bachelor of Science (Information Technology)</h3>
+
+<p>
+S.C.C.T College, Sanpada, Navi Mumbai
+</p>
+
+<p>
+CGPA: <strong>9.30</strong>
+</p>
+
+</div>
+
+</section>
+
+<section id="contact" class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>📧 Email: sanskrutikadam86@gmail.com</p>
+
+<p>📱 Phone: +91 8104591780</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sanskruti Kadam | Portfolio
+
+</footer>
 
 </body>
 </html>
