@@ -95,8 +95,11 @@ margin-bottom:15px;
 }
 
 .hero p{
-font-size:1.2rem;
-margin-bottom:30px;
+#typing-text{
+font-size:1.3rem;
+font-weight:600;
+min-height:35px;
+}
 }
 
 .btn{
@@ -201,6 +204,53 @@ justify-content:center;
 
 </style>
 </head>
+  <script>
+
+const roles = [
+  "BSc IT Graduate",
+  "Data Analytics Enthusiast",
+  "Aspiring Developer",
+  "Tech Explorer"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let currentText = "";
+let isDeleting = false;
+
+function typeEffect() {
+
+  const element = document.getElementById("typing-text");
+
+  if (!isDeleting) {
+    currentText = roles[roleIndex].substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === roles[roleIndex].length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1500);
+      return;
+    }
+
+  } else {
+
+    currentText = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  }
+
+  element.textContent = currentText;
+
+  setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+
+</script>
 
 <body>
 
@@ -221,10 +271,7 @@ justify-content:center;
 
 <h1>Hi, I'm Sanskruti 👋</h1>
 
-<p>
-BSc IT Graduate | Data Analytics, Web Development & Technology Enthusiast
-</p>
-
+<p id="typing-text"></p>
 <div class="hero-buttons">
 
 <a href="Sanskruti_Kadam_Resume.pdf"
