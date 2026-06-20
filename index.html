@@ -31,17 +31,22 @@ position:sticky;
 top:0;
 background:white;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 padding:18px 8%;
 box-shadow:0 2px 12px rgba(0,0,0,0.08);
 z-index:1000;
 }
-
 .logo{
 font-size:1.5rem;
 font-weight:bold;
 color:#4f46e5;
+}
+#theme-toggle{
+background:none;
+border:none;
+font-size:1.4rem;
+cursor:pointer;
 }
 
 nav ul{
@@ -49,7 +54,7 @@ display:flex;
 list-style:none;
 gap:25px;
 }
-
+   
 nav a{
 text-decoration:none;
 color:#334155;
@@ -243,18 +248,20 @@ justify-content:center;
 <body>
 
 <nav>
+
 <div class="logo">SK</div>
-  <button id="theme-toggle">🌙</button>
 
 <ul>
 <li><a href="#about">About</a></li>
-<li><a href="#project">Project</a></li>
+<li><a href="#project">Projects</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-</nav>
 
+<button id="theme-toggle">🌙</button>
+
+</nav>
 <section class="hero">
 <div>
 
