@@ -113,6 +113,12 @@ transition:.3s;
 .btn:hover{
 transform:translateY(-4px);
 }
+  .hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
 
 /* SECTIONS */
 
@@ -219,12 +225,20 @@ justify-content:center;
 BSc IT Graduate | Data Analytics, Web Development & Technology Enthusiast
 </p>
 
+<div class="hero-buttons">
+
 <a href="Sanskruti_Kadam_Resume.pdf"
 class="btn"
 target="_blank">
 View Resume
 </a>
 
+<a href="#project"
+class="btn">
+View Projects
+</a>
+
+</div>
 </div>
 </section>
 
@@ -244,18 +258,53 @@ I enjoy building practical solutions that transform data into meaningful insight
 
 <section id="project" class="container">
 
-<h2 class="section-title">Featured Project</h2>
+<h2 class="section-title">Projects</h2>
+
+<!-- Budget Buddy -->
 
 <div class="card project-card">
 
 <h3>💰 Budget Buddy</h3>
 
-<p>
-A budgeting web application that helps users track income,
-expenses, spending categories and monthly budgets efficiently.
+<p><strong>Academic Project</strong></p>
 
-Built using HTML, CSS, JavaScript, Java and MySQL.
-</p>
+<ul style="text-align:left; margin-top:15px;">
+<li>Developed a budgeting application to track income and expenses efficiently.</li>
+<li>Implemented expense categorization and monthly budget management features.</li>
+<li>Designed a simple and user-friendly interface for financial tracking.</li>
+<li><strong>Technologies:</strong> HTML, CSS, Java, MySQL</li>
+</ul>
+
+</div>
+
+<!-- Excel Dashboard -->
+
+<div class="card project-card">
+
+<h3>📊 Sales Performance Dashboard (Excel)</h3>
+
+<p><strong>Data Analytics Project</strong></p>
+
+<ul style="text-align:left; margin-top:15px;">
+<li>Built an interactive sales dashboard using Microsoft Excel.</li>
+<li>Used Pivot Tables, Pivot Charts, formulas, and data visualization techniques.</li>
+<li>Analyzed region-wise sales, category-wise sales, monthly sales trends, and product performance.</li>
+<li>Created KPI cards and visual reports to generate business insights.</li>
+<li><strong>Technologies:</strong> Microsoft Excel, Pivot Tables, Pivot Charts, Data Visualization</li>
+</ul>
+
+<img src="sales-dashboard.png"
+alt="Sales Dashboard"
+style="width:100%;
+margin-top:20px;
+border-radius:12px;">
+
+<a href="sales-dashboard.png"
+class="btn"
+target="_blank"
+style="margin-top:20px; display:inline-block;">
+View Dashboard
+</a>
 
 </div>
 
